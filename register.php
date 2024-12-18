@@ -1,80 +1,92 @@
-<?php
-include 'koneksi.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Aplikasi Pengaduan Masyarakat - Register</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
-<body class="bg-light">
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6 mx-auto">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="text-center">Register</h3>
+<body class="bg-gradient-dark">
 
-                    <?php
-                    if (isset($_POST['register'])) {
-                        $nik = $_POST['nik'];
-                        $nama = $_POST['nama'];
-                        $username = $_POST['username'];
-                        $password = md5($_POST['password']); 
-                        $telp = $_POST['telp'];
-                        $level = $_POST['level'];
+  <div class="container">
 
-                        // Insert query to add user
-                        $insert = mysqli_query($koneksi, "INSERT INTO user(nik, nama, username, password, telp, level) 
-                                                          VALUES('$nik', '$nama', '$username', '$password', '$telp', '$level')");
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
 
-                        if ($insert) {
-                            echo '<script>alert("Pendaftaran Berhasil!"); location.href="login.php";</script>';
-                        } else {
-                            echo '<script>alert("Pendaftaran Gagal");</script>';
-                        }
-                    }
-                    ?>
+      <div class="col-xl-6 col-lg-6 col-md-9">
 
-                    <form method="post">
-                        <div class="form-group mb-3">
-                            <input name="nik" type="text" class="form-control" placeholder="Masukkan NIK Anda..." required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <input name="nama" type="text" class="form-control" placeholder="Masukkan Nama Anda..." required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <input name="username" type="text" class="form-control" placeholder="Masukkan Username Anda..." required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan Password" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <input name="telp" type="text" class="form-control form-control-user" id="exampleInputPhone" placeholder="Masukkan Nomer Telepon Anda..." required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <select name="level" class="form-select" required>
-                                <option value="admin">Admin</option>
-                                <option value="masyarakat">Masyarakat</option>
-                                <option value="petugas">Petugas</option>
-                            </select>
-                        </div>
-                        <button type="submit" name="register" value="register" class="btn btn-primary w-100">Register</button>
-                    </form>
-
-                    <p class="text-center mt-3">Sudah punya akun? <a href="login.php" class="text-decoration-none">Login</a></p>
+        <div class="card o-hidden border-0 shadow-lg my-5"bg-gradient-light>
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Isi data diri anda untuk mulai melaporkan dan mendapatkan 
+                    pembaruan laporan</h1>
+                  </div>
+                  <form method="post" action="proses-register.php" class="user">
+                    <div class="form-group">
+                      <input name="nik"type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukan NIK Anda..." required>
+                    </div>
+                    <div class="form-group">
+                      <input name="nama"type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukan Nama Anda..." required>
+                    </div>
+                    <div class="form-group">
+                      <input name="username"type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukan Usename Anda..." required>
+                    </div>
+                    <div class="form-group">
+                      <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder=" Masukan Password" required>
+                    </div>
+                    <div class="form-group">
+                      <input name="telp"type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukan Nomer Telpon Anda..." required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                      Register Akun Baru
+                    </button>
+                    <hr>
+                    <a href="index.php" class="btn btn-success btn-user btn-block">
+                      <i class="fa fa-bus fa-fw"></i> Sudah Punya Akun...? Silakan Login
+                    </a>
+                      
+                  </form>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
 </body>
+
 </html>

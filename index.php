@@ -2,102 +2,85 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Pengaduan Masyarakat</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="author" content="">
 
-  <!-- Favicons -->
-  <link href="haha/assets/img/favicon.png" rel="icon">
-  <link href="haha/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <title>Aplikasi Pengaduan Masyarakat - Login</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="haha/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="haha/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="haha/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="haha/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="haha/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="haha/assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: QuickStart
-  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="bg-gradient-light">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  <div class="container">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="haha/assets/img/logo.png" alt="">
-        <h1 class="sitename">Pengaduan Masyarakat</h1>
-      </a>
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
 
-      <nav id="navmenu" class="navmenu">
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      <div class="col-xl-5 col-lg-6 col-md-9">
 
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-      <div class="hero-bg">
-        <img src="haha/assets/img/hero-bg-light.webp" alt="">
-      </div>
-      <div class="container text-center">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <h1 data-aos="fade-up">Selamat datang di <span>Pengaduan Masyarakat</span></h1>
-          <p data-aos="fade-up" data-aos-delay="100">Quickly start your project now and set the stage for success<br></p>
-          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="login.php" class="btn-get-started">Laporkan</a>
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="p-5">
+                  <div class="text-center">
+                   <h1 class="h4 text-gray-900 mb-4">Silakan Login <br>Sebagai Masyarakat</h1>
+                  </div>
+                  <form method="post" action="proses-login.php" class="user">
+                    <div class="form-group">
+                      <input name="nik" type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Masukan NIK Anda..." required>
+                    </div>
+                    <div class="form-group">
+                      <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukan Password Anda..." required>
+                    </div>
+                    <div class="form-group">          
+                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                      Login
+                    </button>
+                    </a>
+                    <hr>
+                    <a href="register.php" class="btn btn-danger btn-user btn-block">
+                      <i class="fa fa-laptop fa-fw"></i> Belum Punya Akun...? Silahkan Daftar
+                    </a>
+                      <a href="index2.php" class="btn btn-info btn-user btn-block">
+                      <i class="fa fa-file person fa-key"></i> Login Sebagai Admin / Petugas
+                    </a>
+                  </form>               
+                  <hr>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <img src="haha/assets/img/hero-services-img.webp" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
         </div>
+
       </div>
 
-    </section>
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Pengaduan Masyarakat</strong><span>All Rights Reserved</span></p>
     </div>
 
-  </footer>
+  </div>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="haha/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="haha/assets/vendor/php-email-form/validate.js"></script>
-  <script src="haha/assets/vendor/aos/aos.js"></script>
-  <script src="haha/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="haha/assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="haha/assets/js/main.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
